@@ -12,8 +12,8 @@ public class Exercise06_04 {
 
     }
 
-    public static void reverse(int num){
-        while (num > 0){
+    public static void reverse(int num) {
+        while (num > 0) {
             System.out.print(num % 10);
             num /= 10;
         }

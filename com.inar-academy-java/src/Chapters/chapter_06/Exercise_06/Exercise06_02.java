@@ -8,9 +8,9 @@ public class Exercise06_02 {
         System.out.println("Sum of the digits " + num + " is " + sumDigits(num));
     }
 
-    public static int sumDigits(long num){
+    public static int sumDigits(long num) {
         int sum = 0;
-        while(num > 0){
+        while (num > 0) {
             sum += num % 10;
             num /= 10;
         }

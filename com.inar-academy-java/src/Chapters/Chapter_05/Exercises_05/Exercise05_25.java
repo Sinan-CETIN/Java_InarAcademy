@@ -1,36 +1,13 @@
 public class Exercise05_25 {
     public static void main(String[] args) {
-        double pi = 0;
-        int count = 1;
-        for(int i = 1; i <= 10000; i += 2, count++){
-            if(count % 2 == 0)
-                pi -= 1.0 / i;
-            else
-                pi += 1.0 / i;
-        }
-        pi *= 4;
-        System.out.println("Pi number for 10000: " + pi);
+        double pi = 0.0;
+        for (int i = 1; i <= 100000; i++) {
 
-        pi = 0;
-        count = 1;
-        for(int i = 1; i <= 20000; i += 2, count++){
-            if(count % 2 == 0)
-                pi -= 1.0 / i;
-            else
-                pi += 1.0 / i;
-        }
-        pi *= 4;
-        System.out.println("Pi number for 20000: " + pi);
+            pi += Math.pow(-1, i + 1) / (2 * i - 1.0);
 
-        pi = 0;
-        count = 1;
-        for(int i = 1; i <= 30000; i += 2, count++){
-            if(count % 2 == 0)
-                pi -= 1.0 / i;
-            else
-                pi += 1.0 / i;
+            if (i % 10000 == 0) {
+                System.out.println("Pi value of " + i + ": " + (4.0 * pi));
+            }
         }
-        pi *= 4;
-        System.out.println("Pi number for 30000: " + pi);
     }
 }

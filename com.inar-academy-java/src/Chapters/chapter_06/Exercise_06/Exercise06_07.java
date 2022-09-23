@@ -12,14 +12,15 @@ public class Exercise06_07 {
         int year = input.nextInt();
 
         System.out.printf("%-8s%-15s", "Years", "Future Value\n");
-        for(int i = 1; i <= year ; i++){
-            System.out.printf("%-8d%15.2f", i, futureInvestmentValue(investmentAmount,monthlyInterestRate, i));
+        for (int i = 1; i <= year; i++) {
+            System.out.printf("%-8d%15.2f", i, futureInvestmentValue(investmentAmount, monthlyInterestRate, i));
             System.out.println(
             );
         }
 
     }
-    public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years){
+
+    public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years) {
         double futureInvestmentValue = investmentAmount * Math.pow((1 + (monthlyInterestRate)), (years * 12));
         return futureInvestmentValue;
     }

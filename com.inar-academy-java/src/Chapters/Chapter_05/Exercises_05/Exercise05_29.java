@@ -27,8 +27,8 @@ public class Exercise05_29 {
                 case 11 :m1 = 31; m = 30;header = "                November " +year;break;
                 case 12 :m1 = 30; m = 31;header = "                December " +year;break;
             }
-            if(i != 0)
-                day = (day + m1) % 7;
+
+            day = (day + m1) % 7;
             System.out.println(header + "\n------------------------------------------");
             System.out.println("Sun   Mon   Tue   Wed   Thu   Fri   Sat");
 
@@ -41,7 +41,7 @@ public class Exercise05_29 {
                 else
                     System.out.printf("%-6d", j);
             }
-            System.out.println("\n");
+            System.out.println("\n============================================");
         }
     }
 
