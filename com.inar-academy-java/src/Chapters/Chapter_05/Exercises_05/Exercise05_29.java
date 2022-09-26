@@ -9,7 +9,6 @@ public class Exercise05_29 {
         int day = input.nextInt();
         int m = 0;
         int m1 = 0;
-
         for(int i = 1; i <= 12; i++){
             String header = "";
             switch(i){
@@ -27,7 +26,6 @@ public class Exercise05_29 {
                 case 11 :m1 = 31; m = 30;header = "                November " +year;break;
                 case 12 :m1 = 30; m = 31;header = "                December " +year;break;
             }
-
             day = (day + m1) % 7;
             System.out.println(header + "\n------------------------------------------");
             System.out.println("Sun   Mon   Tue   Wed   Thu   Fri   Sat");
@@ -44,5 +42,4 @@ public class Exercise05_29 {
             System.out.println("\n============================================");
         }
     }
-
 }

@@ -1,6 +1,8 @@
+package Chapters.chapter_06.Exercise_06;
+
 import java.util.Scanner;
 
-public class Listing06_12 {
+public class Exercise06_34 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         //Prompt the user to enter year and month
@@ -70,7 +72,7 @@ public class Listing06_12 {
 
     public static void printMonthBody(int year, int month) {
         //get start day of the week for the first date in the month
-        int startDay = getStartDay(year, month);
+        int startDay = getStartDay(year, month, 1);
 
         //get number of days in the month
         int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
@@ -88,32 +90,17 @@ public class Listing06_12 {
         System.out.println();
     }
 
-    public static int getStartDay(int year, int month) {
-        final int START_DAY_FOR_JAN_1_1800 = 3;
-        // Get total days from 1/1/1800 to month/1/year
-        int totalNumberOfdays = getTotalNumberOfDays(year, month);
-
-        // return the start day for month/1/year
-        return (START_DAY_FOR_JAN_1_1800 + totalNumberOfdays) % 7;
-    }
-
-    public static int getTotalNumberOfDays(int year, int month) {
-        int total = 0;
-        // get the total days from 1800 to 1/1/1800 to 1/1/year
-
-        for (int i = 1800; i < year; i++) {
-            if (isLeapYear(i)) {
-                total += 366;
-            } else {
-                total += 365;
-            }
+    public static int getStartDay(int year, int m, int q) {
+        if (m == 1 || m ==2) {
+            m += 12;
+            year--;
         }
-        for (int i = 1; i < month; i++) {
-            total += getNumberOfDaysInMonth(year, i);
-        }
-        return total;
-    }
+        int j = year / 100;
+        int k = year  % 100;
+        int h = (q + (26 * (m + 1) / 10) + k + k / 4 + j / 4 + 5 * j) % 7;
+        return (h + 6) % 7;
 
+    }
     public static int getNumberOfDaysInMonth(int year, int month) {
         if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 ||
                 month == 10 || month == 12)
@@ -129,5 +116,4 @@ public class Listing06_12 {
     public static boolean isLeapYear(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
-
 }

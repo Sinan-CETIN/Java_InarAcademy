@@ -1,6 +1,6 @@
 package Chapters.chapter_06.Exercise_06;
 
-public class Exercise06_24 {
+public class Exercise06_33 {
     public static void main(String[] args) {
         printCalender();
     }
@@ -11,7 +11,7 @@ public class Exercise06_24 {
         int currentMinutes = (int) getCurrentMinutes(time);
         int currentHour = (int) getCurrentHour(time);
 
-        System.out.println(getYear(time) + "/" + getCurrentDayAndMonth(time) + "       " + currentHour + ":" + ((currentMinutes < 10) ? "0" + currentMinutes : currentMinutes) + ":" + currentSeconds);
+        System.out.println("Current date and time is " + getCurrentDayAndMonth(time) + ", " +  currentHour + ":" + ((currentMinutes < 10) ? "0" + currentMinutes : currentMinutes) + ":" + currentSeconds);
     }
 
     public static long getTotalSeconds(long time) {
@@ -74,7 +74,51 @@ public class Exercise06_24 {
         }
         int dayInTheYear = totalDay - sum;
         String monthAndDay = getMonth(dayInTheYear, year);
-        return monthAndDay;
+
+        String month = monthAndDay.substring(0, monthAndDay.indexOf('/'));
+
+        String day = monthAndDay.substring(monthAndDay.indexOf('/') + 1);
+        switch (month) {
+            case "1":
+                month = "January";
+                break;
+            case "2":
+                month = "February";
+                break;
+            case "3":
+                month = "March";
+                break;
+            case "4":
+                month = "April";
+                break;
+            case "5":
+                month = "May";
+                break;
+            case "6":
+                month = "June";
+                break;
+            case "7":
+                month = "July";
+                break;
+            case "8":
+                month = "August";
+                break;
+            case "9":
+                month = "September";
+                break;
+            case "10":
+                month = "November";
+                break;
+            case "11":
+                month = "October";
+                break;
+            case "12":
+                month = "December";
+                break;
+
+
+        }
+        return month + " " + day;
     }
 
     public static String getMonth(int day, int year) {
@@ -99,5 +143,6 @@ public class Exercise06_24 {
             }
         }
         return monthNumber + "/" + day;
+
     }
 }
