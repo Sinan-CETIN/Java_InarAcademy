@@ -2,7 +2,7 @@ package Chapters.Chapter_07.Exercise_07;
 
 import java.util.Scanner;
 
-public class Exercise07_0512 {
+public class ExercisegetDistinct {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class Exercise07_0512 {
         for (int i = 0; i < list.length; i++) {
             list[i] = input.nextInt();
         }
-        int[] distinctList = getDistinctList(list);
+        int[] distinctList = eliminateDuplicates(list);
 
 
         System.out.println("The number of distinct number is" + distinctList.length);
@@ -22,7 +22,7 @@ public class Exercise07_0512 {
         }
     }
 
-    public static int[] getDistinctList(int[] array) {
+    public static int[] eliminateDuplicates(int[] array) {
         int count = 0;
         for (int i = 0; i < array.length; i++) {
             if (isDistinct(array[i],i,array))
