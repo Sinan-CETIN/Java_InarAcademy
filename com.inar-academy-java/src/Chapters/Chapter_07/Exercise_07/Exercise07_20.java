@@ -4,7 +4,7 @@ public class Exercise07_20 {
     public static void main(String[] args) {
         double[] array = createRandomDoubleArray(10);
         selectionSort(array);
-        disPlayArray(array);
+        displayArray(array);
     }
 
     public static double[] createRandomDoubleArray(int length) {
@@ -34,7 +34,7 @@ public class Exercise07_20 {
         }
     }
 
-    public static void disPlayArray(double[] array)  {
+    public static void displayArray(double[] array)  {
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%.2f  ", array[i]);
             if((i + 1) % 10 == 0)
