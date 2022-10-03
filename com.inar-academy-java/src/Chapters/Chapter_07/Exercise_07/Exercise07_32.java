@@ -21,7 +21,7 @@ public class Exercise07_32 {
         int pivotIndex = 0;
         int low = 1;
         int high = list.length - 1;
-        boolean finish = true;
+
 
         while (low < high) {
             while (pivot > list[low]) {
