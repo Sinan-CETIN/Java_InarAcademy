@@ -153,7 +153,7 @@ public class Exercise08_09 {
     public static boolean isDraw(char[][] table) {
         for (int i = 0; i < table.length ; i++) {
             for (int j = 0; j < table[i].length; j++) {
-                if(table[i][j] != 'X' || table[i][j] != 'O') {
+                if(table[i][j] == '\u0000') {
                     return false;
                 }
             }
