@@ -1,8 +1,9 @@
-package Chapters.Chapter_08.Listing_08;
+package Chapters.Chapter_08.Exercise_08;
+
 
 import java.util.Scanner;
 
-public class Listing08_03 {
+public class Exercise08_08 {
     //0 0 1 1 -1 -1 2 2 -2 -2 -3 -3 -4 -4 5 5
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -31,8 +32,30 @@ public class Listing08_03 {
                 }
             }
         }
-        System.out.println("The closest points are (" + points[p1][0] + ", " + points[p1][1] + ") and (" +
-                points[p2][0] + ", " + points[p2][1] + ")" );
+        System.out.println("Shortest distance is --> " + shortestDistance
+        + "\n");
+
+        displayClosestPairs(points, shortestDistance);
+    }
+
+    public static void displayClosestPairs(double[][] points, double shortestDistance) {
+        int p2;
+        int p1;
+        for (int i = 0; i < points.length; i++) {
+            for (int j = i + 1; j < points.length; j++) {
+                double distance = distance(points[i][0], points[i][1], points[j][0], points[j][1]);
+
+                if (shortestDistance == distance) {
+                    shortestDistance = distance;
+                    p1 = i;
+                    p2 = j;
+                    System.out.println("The closest points are (" + points[p1][0] + ", " + points[p1][1] + ") and (" +
+                            points[p2][0] + ", " + points[p2][1] + ")" );
+
+
+                }
+            }
+        }
     }
 
     public static double distance(double x1, double y1, double x2, double y2) {
