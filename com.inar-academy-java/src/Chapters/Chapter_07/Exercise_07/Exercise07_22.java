@@ -1,8 +1,5 @@
 package Chapters.Chapter_07.Exercise_07;
 
-
-import java.util.Arrays;
-
 public class Exercise07_22 {
     public static void main(String[] args) {
         int[] board = placeQueens();
@@ -12,7 +9,9 @@ public class Exercise07_22 {
     public static int[] placeQueens() {
         int[] board = new int[8];
         int row = 0;
+        int count = 0;
         while (row < board.length) {
+            count++;
             boolean[] haveAppropriatePlace = createBooleanArray();
             if (checkPossiblePlace(board, row, haveAppropriatePlace)) {
                 place(row, board, haveAppropriatePlace);
@@ -21,6 +20,7 @@ public class Exercise07_22 {
                 row = 0;
             }
         }
+        System.out.println(count);
         return board;
     }
 
@@ -45,7 +45,7 @@ public class Exercise07_22 {
                 havePlace[rightDiagonal] = false;
             }
 
-            if (leftDiagonal > 0) {
+            if (leftDiagonal >= 0) {
                     havePlace[leftDiagonal] = false;
             }
         }
