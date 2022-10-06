@@ -12,6 +12,7 @@ public class Exercise06_39 {
         double y1 = input.nextDouble();
         double x2 = input.nextDouble();
         double y2 = input.nextDouble();
+
         if (onTheLineSegment(x0, y0, x1, y1, x2, y2)) {
             System.out.println("(" + x2 + ", " + y2 + ") is on the line segment from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + ")");
         } else if (onTheSameLine(x0, y0, x1, y1, x2, y2)) {
