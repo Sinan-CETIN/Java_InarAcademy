@@ -1,4 +1,4 @@
-package Chapters.chapter_06.Exercise_06;
+package Chapters.Chapter_06.Exercise_06;
 
 import java.util.Scanner;
 
@@ -21,6 +21,7 @@ public class Exercise06_31 {
 
 
         int sumOfDoubleEvenPlace = sumOfEvenDoublePlace(card);
+
         int sumOfDigitRightToLeft = sumOfDigitRightToLeft(card);
         int sum = sumOfDoubleEvenPlace + sumOfDigitRightToLeft;
 
@@ -65,8 +66,8 @@ public class Exercise06_31 {
         int prefix = (int) (card / (Math.pow(10, size - 1)));
         if (prefix == 3) {
             prefix *= 10;
-            int n = (int) (card / Math.pow(10, size - 2) % 10);
-            prefix += n;
+            int prefix2 = (int) (card / Math.pow(10, size - 2) % 10);
+            prefix += prefix2;
         }
         return prefix;
     }

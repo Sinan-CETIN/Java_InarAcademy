@@ -1,6 +1,8 @@
-package Chapters.chapter_06.Exercise_06;
+package Chapters.Chapter_06.Exercise_06;
 
 public class Exercise06_24 {
+
+
     public static void main(String[] args) {
         printCalender();
     }
@@ -29,7 +31,6 @@ public class Exercise06_24 {
     public static long getCurrentMinutes(long time) {
         return getTotalMinutes(time) % 60;
     }
-
     public static long getTotalHour(long time) {
         return getTotalMinutes(time) / 60;
     }

@@ -1,4 +1,4 @@
-package Chapters.chapter_06.Exercise_06;
+package Chapters.Chapter_06.Exercise_06;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class Exercise06_22 {
 
         double lastGuess = 1;
         double nextGuess = (lastGuess + n / lastGuess) / 2;
+
         while (Math.abs((nextGuess - lastGuess)) > 0.000001) {
             lastGuess = nextGuess;
             nextGuess = (lastGuess + n / lastGuess) / 2;
