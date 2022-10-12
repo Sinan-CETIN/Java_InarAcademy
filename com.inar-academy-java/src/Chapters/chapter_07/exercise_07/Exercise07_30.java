@@ -6,7 +6,8 @@ public class Exercise07_30 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number of values : ");
-        int[] list = createList(input.nextInt(), input);
+        int numberOfValues = input.nextInt();
+        int[] list = createList(numberOfValues, input);
 
         System.out.println("The list has " + (isConsecutiveFour(list) ? "" : "no ") + "consecutive fours");
     }

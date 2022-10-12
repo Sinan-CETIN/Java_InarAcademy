@@ -48,6 +48,7 @@ public class Exercise07_24 {
         return count;
     }
 
+   //checking whether we have this suit in our early picks
     public static boolean haveSuit(String suit, String[] picks) {
         for (int i = 0; i < picks.length; i++) {
             if (picks[i].equals(suit)) {

@@ -17,6 +17,7 @@ public class Exercise07_34 {
         String result = "";
 
         int[] valuesOfCharactersInString = new int[s.length()];
+
         for(int i = 0; i < valuesOfCharactersInString.length; i++) {
             valuesOfCharactersInString[i] = (int)(s.charAt(i));
         }
@@ -31,6 +32,7 @@ public class Exercise07_34 {
     }
 
     public static void sort(int[] list) {
+
         for (int i = 0; i < list.length - 1; i++) {
             int min = list[i];
             int minIndex = i;
