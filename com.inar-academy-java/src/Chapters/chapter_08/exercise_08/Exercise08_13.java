@@ -38,7 +38,7 @@ public class Exercise08_13 {
     }
 
     public static int[] locateLargest(int[][] array) {
-        int max = array[0][0];
+        int max = Integer.MIN_VALUE;
         int[] result = new int[2];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[0].length; j++) {

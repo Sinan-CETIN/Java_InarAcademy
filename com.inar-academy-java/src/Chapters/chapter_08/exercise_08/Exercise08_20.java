@@ -11,7 +11,7 @@ public class Exercise08_20 {
         int[] height = new int[table[0].length];
         while (!isGameFinish) {
             displayTable(table);
-            System.out.println("Drop a " + (token == 'R' ? "red " : "Yellow") + " disk at column (0–6): ");
+            System.out.println("Drop a " + (token == 'R' ? "Red " : "Yellow") + " disk at column (0–6): ");
             int drop = input.nextInt();
             while (height[drop] == table.length) {
                 System.out.println("This column is full.Please re-enter new column: ");
@@ -63,6 +63,7 @@ public class Exercise08_20 {
             }
             System.out.println();
         }
+        System.out.println("================");
     }
 
     public static void placeToken(char token, char[][] table, int[] height, int drop) {
