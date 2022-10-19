@@ -25,7 +25,7 @@ public class Exercise08_14 {
 
     public static int[][] createRandomArray(int size) {
         int[][] result = new int[size][size];
-        
+
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[i].length; j++) {
                 result[i][j] = (int)(Math.random() * 2);
