@@ -21,5 +21,9 @@ public class Checkpoint09_04 {
                 "contain any setter methods, is the class immutable?");
         System.out.println("\n9.28 --> No");
         System.out.println("\n9.29 --> Yes");
+        System.out.println("\n9.32 --> This keywords refers to instance itself");
+        System.out.println("\n9.33 --> line 5 and 6 need to change place.line 11 must be this.p = p;\n" +
+                "also line 14 must be this.p = p;");
+        System.out.println("\n9.34 --> Test.id = 45; This is wrong, since id is an instance member and cannot be accessed from a class.");
     }
 }
