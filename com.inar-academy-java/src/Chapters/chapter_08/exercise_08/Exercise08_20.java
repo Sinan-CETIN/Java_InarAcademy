@@ -13,9 +13,11 @@ public class Exercise08_20 {
             displayTable(table);
             System.out.println("Drop a " + (token == 'R' ? "Red " : "Yellow") + " disk at column (0–6): ");
             int drop = input.nextInt();
-            while (height[drop] == table.length) {
-                System.out.println("This column is full.Please re-enter new column: ");
-                drop = input.nextInt();
+            boolean isValid = isValidColumn(drop, table, height);
+            if (!isValid) {
+                System.out.println("Invalid Entry!");
+                  continue;
+
             }
             placeToken(token, table, height, drop);
             if (isWin(table, token)) {
@@ -171,5 +173,22 @@ public class Exercise08_20 {
             }
         }
         return false;
+    }
+
+    public static boolean isValid(int number, char[][] table) {
+        if (number >= table[0].length || number < 0) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValidColumn(int number, char[][] table, int[] height) {
+        if (!isValid(number,table)) {
+            return false;
+        }
+        if (height[number] == table.length) {
+            return false;
+        }
+        return true;
     }
 }
