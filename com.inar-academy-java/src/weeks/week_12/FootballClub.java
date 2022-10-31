@@ -10,7 +10,10 @@ public class FootballClub {
 
 
     public FootballClub() {
-
+        this(0, "", 0, "", 0, null);
+    }
+    public FootballClub(double balance, String clubName){
+        this(balance,clubName,0,"",0,null);
     }
 
     public FootballClub(double balance, String clubName, double ticketFee, String stadiumName, int stadiumCapacity, Player[] player) {
@@ -83,24 +86,22 @@ public class FootballClub {
 
     public void sellPlayer(Player p) {
         if (havePlayerInTeam(p)) {
+
             balance += p.getFee();
             int index = findIndexOfPlayer(p);
+            players[index] = null;
 
-            if (index >= 0) {
-                this.players[index] = null;
-            }
         } else {
             System.out.println("The player you are trying to sell is not in  your team!!\nDo not try to cheat the system!");
         }
     }
 
     public void buyPlayer(Player p) {
-        if(haveSpaceInTeam()) {
-            if(haveEnoughMoneyToBuyPlayer(p)) {
+        if (haveSpaceInTeam()) {
+            if (haveEnoughMoneyToBuyPlayer(p)) {
                 balance -= p.getFee();
                 placePlayer(p);
-            }
-            else {
+            } else {
                 System.out.println("Too Broke!!!.Earn some money!");
             }
         } else {
@@ -110,7 +111,7 @@ public class FootballClub {
 
     private void placePlayer(Player p) {
         for (int i = 0; i < this.players.length; i++) {
-            if(players[i] == null) {
+            if (players[i] == null) {
                 players[i] = p;
                 return;
             }
@@ -120,7 +121,7 @@ public class FootballClub {
     private boolean havePlayerInTeam(Player p) {
 
         for (int i = 0; i < this.players.length; i++) {
-            if(players[i] == null) continue;
+            if (players[i] == null) continue;
             if (players[i].getName().equals(p.getName())) {
                 return true;
             }
@@ -130,8 +131,8 @@ public class FootballClub {
 
     private int findIndexOfPlayer(Player p) {
         for (int i = 0; i < this.players.length; i++) {
-            if(players[i] == null) continue;
-            if(this.players[i].getName().equals(p.getName())) {
+            if (players[i] == null) continue;
+            if (this.players[i].getName().equals(p.getName())) {
                 return i;
             }
         }
@@ -140,12 +141,13 @@ public class FootballClub {
 
     private boolean haveSpaceInTeam() {
         for (int i = 0; i < this.players.length; i++) {
-            if(players[i] == null) {
+            if (players[i] == null) {
                 return true;
             }
         }
         return false;
     }
+
     public boolean haveEnoughMoneyToBuyPlayer(Player p) {
         return balance >= p.getFee();
     }
