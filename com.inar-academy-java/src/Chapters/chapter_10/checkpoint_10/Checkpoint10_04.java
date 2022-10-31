@@ -8,5 +8,6 @@ public class Checkpoint10_04 {
         System.out.println("10.27 How do you create a string builder from a string? How do you return a string from a\n" +
                 "string builder?");
         System.out.println("");
+        String s1 = "sianfasd";
     }
 }
