@@ -13,7 +13,6 @@ public class Exercise10_06 {
             }
             number++;
         }
-
         display(stack);
     }
 
