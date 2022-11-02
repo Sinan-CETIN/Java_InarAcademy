@@ -32,7 +32,7 @@ public class LocationTest {
             count++;
         }
 
-    `    Location location = new Location();
+        Location location = new Location();
         System.out.println(location.toString());
 
         Location location2 = new Location(2, 3, 155.527);

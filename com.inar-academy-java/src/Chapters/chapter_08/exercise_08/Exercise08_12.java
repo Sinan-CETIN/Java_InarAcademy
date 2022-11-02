@@ -32,6 +32,7 @@ public class Exercise08_12 {
             return 0;
         }
         double tax = 0;
+
         for (int i = brackets[status].length - 1; i >= 0; i--) {
             if (taxableIncome > brackets[status][i]) {
                 tax += (taxableIncome - brackets[status][i]) * rates[i + 1];
