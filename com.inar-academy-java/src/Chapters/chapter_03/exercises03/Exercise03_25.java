@@ -24,7 +24,7 @@ public class Exercise03_25 {
 		double f = (y3 - y4) + x3 - (x3 - x4) * y3;
 		
 		if(a * d - b * c == 0)
-			System.out.println("The two lines are paralel.");
+			System.out.println("The two lines are parallel.");
 		else {
 			double x = (e * d - b * f) / (a * d - b * c);
 			double y = (a * d - e * c) / (a * d - b * c);
