@@ -83,4 +83,7 @@ public class MyRectangle2D {
     private double getMaxY() {
         return this.getY() + (this.getHeight() / 2);
     }
+    public String toString() {
+        return "Rectangle's center (" + this.getX()+ ", "+ this.getY() + ") width -> "+ getWidth() + " height -> " + getHeight();
+    }
 }
