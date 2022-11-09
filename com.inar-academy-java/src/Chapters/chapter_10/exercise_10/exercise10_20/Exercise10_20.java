@@ -13,7 +13,7 @@ public class Exercise10_20 {
         for (int i = 100; i <= 1000; i += 100) {
             BigDecimal sum = BigDecimal.ONE;
             for (int j = 1; j < i; j++) {
-                BigDecimal increase = BigDecimal.ONE.divide(factor(i), 25, BigDecimal.ROUND_UP);
+                BigDecimal increase = BigDecimal.ONE.divide(factor(j), 25, BigDecimal.ROUND_UP);
                 sum = sum.add(increase);
             }
             System.out.println(i + " --> " + sum);
