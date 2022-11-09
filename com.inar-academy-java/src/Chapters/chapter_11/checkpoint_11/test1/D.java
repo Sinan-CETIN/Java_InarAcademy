@@ -1,4 +1,4 @@
-package Chapters.chapter_11.checkpoint_11.tests;
+package Chapters.chapter_11.checkpoint_11.test1;
 
 class F {
     public F() {
