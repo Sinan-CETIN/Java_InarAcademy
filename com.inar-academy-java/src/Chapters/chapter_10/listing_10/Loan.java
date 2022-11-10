@@ -67,5 +67,11 @@ public class Loan {
     public java.util.Date getLoanDate() {
         return loanDate;
     }
+
+    @Override
+    public String toString() {
+        String s = String.format("Loan Amount : %.2f\nTotal Amount %.2f", this.loanAmount, this.getTotalPayment());
+        return s;
+    }
 }
 
