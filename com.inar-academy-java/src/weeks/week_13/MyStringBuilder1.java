@@ -1,4 +1,4 @@
-package Chapters.chapter_10.exercise_10.exercise10_27;
+package weeks.week_13;
 
 public class MyStringBuilder1 {
 
@@ -12,6 +12,7 @@ public class MyStringBuilder1 {
         this.s = this.s + s.toString();
         return this;
     }
+
     public MyStringBuilder1 append(int i) {
         this.s = this.s + i;
         return this;
@@ -19,21 +20,41 @@ public class MyStringBuilder1 {
     public int length() {
         return this.s.length();
     }
-    public String toString() {
-        return this.s;
-    }
 
     public char charAt(int index) {
         return this.s.charAt(index);
     }
 
     public MyStringBuilder1 toLowerCase() {
-        this.s = this.s.toLowerCase();
+        String s1 = "";
+        for (int i = 0; i < this.s.length(); i++) {
+            if(this.s.charAt(i) >= 'A' && this.s.charAt(i) <= 'Z') {
+                char ch = (char)(s.charAt(i) - ('A' - 'a'));
+                s1 += ch;
+            } else {
+                s1 += this.s.charAt(i);
+            }
+        }
+        this.s = s1;
         return this;
+
+       /* this.s = s.toLowerCase();
+        return this;*/
     }
 
     public MyStringBuilder1 substring(int begin, int end) {
+        /*String s1 = "";
+        for (int i = begin; i < end; i++) {
+            s1 += this.s.charAt(i);
+        }
+        this.s = s1;
+        return this;*/
+
         this.s = this.s.substring(begin, end);
         return this;
+    }
+
+    public String toString() {
+        return this.s;
     }
 }
