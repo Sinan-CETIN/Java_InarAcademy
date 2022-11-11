@@ -7,7 +7,7 @@ public class Exercise10_24 {
         MyString2 s3 = new MyString2("Sinan----4240");
         MyString2 s4 = new MyString2("Sinan5240");
         s1.toUpperCase();
-        System.out.println(s1.toString());
+        System.out.println(s1);
         char[] chars = s2.toChars();
         System.out.println(chars[0]);
         System.out.println(s1.compare(s4.toString()));

@@ -66,7 +66,7 @@ public class Account {
             System.out.println("The amount you can withdraw at most : " + this.balance);
             return;
         }
-        this.balance = balance - amount;
+        this.balance -= amount;
         transactions.add(new Transaction(Transaction.WITHDRAW, amount, balance));
     }
 

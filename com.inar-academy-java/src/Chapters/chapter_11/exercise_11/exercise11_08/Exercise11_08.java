@@ -45,11 +45,7 @@ public class Exercise11_08 {
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println("==========================");
-            if(i == list.size() - 1) {
-                System.out.println(list.get(i).getDescripton() + "\n");
-            } else {
-                System.out.println(list.get(i).getDescripton() + "\n==========================");
-            }
+            System.out.println(list.get(i).getDescripton() + "\n==========================");
         }
         System.out.println("XXXXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXXXXX\n");
     }

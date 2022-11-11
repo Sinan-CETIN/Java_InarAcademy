@@ -42,7 +42,6 @@ public class MyString1 {
     public MyString1 toLowerCase() {
         char[] chars = new char[this.length()];
         for (int i = 0; i < this.chars.length; i++) {
-
             if (Character.isLetter(this.charAt(i))) {
                 chars[i] = Character.toLowerCase(this.charAt(i));
             } else {
