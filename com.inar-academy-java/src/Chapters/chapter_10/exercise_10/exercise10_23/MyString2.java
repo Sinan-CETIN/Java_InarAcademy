@@ -46,7 +46,7 @@ public class MyString2 {
     public MyString2 toUpperCase() {
         for (int i = 0; i < chars.length; i++) {
             if (Character.isLetter(this.chars[i])) {
-                Character.toUpperCase(this.chars[i]);
+               this.chars[i] = Character.toUpperCase(this.chars[i]);
             }
         }
         String s = createString(this.chars);
