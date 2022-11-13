@@ -19,4 +19,5 @@ public class Staff extends Employee {
     public void setTitle(String title) {
         this.title = title;
     }
+
 }

@@ -3,7 +3,12 @@ package Chapters.chapter_11.exercise_11.exercise11_10;
 import java.util.ArrayList;
 
 public class MyStack extends ArrayList<Object> {
+    public static final int DEFAULT_CAPACITY = 16;
     public MyStack() {
+        this(DEFAULT_CAPACITY);
+    }
+    public MyStack(int capacity) {
+        super(capacity);
     }
 
     public Object peek() {

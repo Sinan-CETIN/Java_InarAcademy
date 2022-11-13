@@ -1,11 +1,13 @@
 package Chapters.chapter_10.exercise_10.exercise10_22;
 
+import java.util.Arrays;
+
 public class MyString1 {
 
     private char[] chars;
 
     public MyString1(char[] chars) {
-        this.chars = chars;
+        this.chars = Arrays.copyOf(chars, chars.length);
     }
 
     public char charAt(int index) {
