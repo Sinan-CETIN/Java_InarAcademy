@@ -145,6 +145,44 @@ public class Checkpoint12_01 {
                 "you rename a file? \n\t --> renameTo(dest: File): boolean  \nCan you find the file size (the number of bytes) using the File" +
                 "class?\n\t --> YES \nHow do you create a directory?\n\t --> new File(pathname: String)");
         System.out.println("12.29 Can you use the File class for I/O? --> No \nDoes creating a File object create a file on the disk? --> No\n");
+        System.out.println("12.30 How do you create a PrintWriter to write data to a file?\n\t --> PrintWriter output = new PrintWriter(new File(filename)\n" +
+                "What is the reason to declare throws Exception in the main method in Listing 12.13, WriteData.java?\n\t--> Invoking the constructor of PrintWriter may throw an I/O exception. Java forces you to write\n" +
+                "the code to deal with this type of exception.\n" +
+                "What would happen if the close() method were not invoked in Listing 12.13?\n\t--> If this method is not invoked," +
+                "the data may not be saved properly in the file.\n");
+        System.out.println("12.31 Show the contents of the file temp.txt after the following program is executed.\n" +
+                "\namount is 32.320000 3.232000e+01\n" +
+                "amount is 32.3200 3.2320e+01\n" +
+                " false\n" +
+                "  Java\n");
+        System.out.println("12.33 How do you create a Scanner to read data from a file? " +
+                "\n\t--> new Scanner(filename);" +
+                "\nWhat is the reason to define throws Exception in the main method in Listing 12.15, ReadData.java? " +
+                "\n\tInvoking the constructor new Scanner(File) may throw an I/O exception, so the main\n" +
+                "method declares throws Exception in line 4.\n" +
+                " What would happen if the close() method were not invoked in Listing 12.15?\n\t" +
+                "It is not necessary to close the input file (line 22), but it is a good practice to do so to release\n" +
+                "the resources occupied by the file.\n");
+        System.out.println("12.35 Is the line separator the same on all platforms? What is the line separator on Windows?\n\t" +
+                "--> No. Line separator is \\r and \\n on Windows\n");
+        System.out.println("12.36 Suppose you enter 45 57.8 789, then press the Enter key. Show the contents of the\n" +
+                "variables after the following code is executed.\n" +
+                "Scanner input = new Scanner(System.in);\n" +
+                "int intValue = input.nextInt(); --> 45\n" +
+                "double doubleValue = input.nextDouble(); --> 57.8\n" +
+                "String line = input.nextLine(); --> \"\" + 7 + 8 + 9\n");
+
+        System.out.println("12.37 Suppose you enter 45, press the Enter key, 57.8, press the Enter key, 789, and press\n" +
+                "the Enter key. Show the contents of the variables after the following code is executed.\n" +
+                "Scanner input = new Scanner(System.in);\n" +
+                "int intValue = input.nextInt(); --> 45\n" +
+                "double doubleValue = input.nextDouble(); --> 57.8\n" +
+                "String line = input.nextLine(); --> line is empty\n");
+
+        System.out.println("12.38 How do you create a Scanner object for reading text from a URL?\n\t--> Scanner input = new Scanner(new java.net.URL(URLString).openStream();\n");
+        System.out.println("12.39 Before a URL is added to listOfPendingURLs, line 25 checks whether it has been traversed.\n" +
+                " Is it possible that listOfPendingURLs contains duplicate URLs?\n\t--> Yes " +
+                "\nIf so, give an example.\n\t-->Possible. Suppose link1 is not in listOfTraversedURLs,\n\t but it appears more than one time in a page. Duplicate link1 \n\twill be added into listOfPendingURLs.");
 
     }
 }
