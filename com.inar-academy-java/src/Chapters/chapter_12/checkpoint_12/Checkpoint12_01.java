@@ -31,7 +31,7 @@ public class Checkpoint12_01 {
                 "System.out.println(\"Continue after the catch block\");\n" +
                 "}\n" +
                 "}\n" +
-                "12.05--> \n\t\tvalue is too small\n\t\tContinue after the catch block\n" );
+                "12.05--> \n\t\tvalue is too small\n\t\tContinue after the catch block\n");
         System.out.println("12.6 Show the output of the following code.\n" +
                 "12.06A --> 0 1\n" +
                 "12.06B --> 0 \n");
@@ -109,6 +109,42 @@ public class Checkpoint12_01 {
                 "statement5 be executed? --> Yes\n" +
                 "■ If the exception is not of type Exception1, will statement4 be executed,--> Yes \nand" +
                 "will statement5 be executed? --> No");
+
+        System.out.println("12.22 The following method checks whether a string is a numeric string: --> TRUE.\n" +
+                "check(token) ? return true : false;\n");
+        System.out.println("12.23 Suppose that statement2 causes an exception in the following statement:\n" +
+                "try {\n" +
+                "statement1;\n" +
+                "statement2;\n" +
+                "statement3;\n" +
+                "}\n" +
+                "catch (Exception1 ex1) {\n" +
+                "}\n" +
+                "catch (Exception2 ex2) {\n" +
+                "throw ex2;\n" +
+                "}\n" +
+                "finally {\n" +
+                "statement4;\n" +
+                "}\n" +
+                "statement5;\n" +
+                "Answer the following questions:\n" +
+                "■ If no exception occurs, will statement4 be executed --> Yes, \nand will statement5 be executed? --> Yes\n" +
+                "■ If the exception is of type Exception1, will statement4 be executed --> YEs, \nand will statement5 be executed? --> YES\n" +
+                "■ If the exception is of type Exception2, will statement4 be executed--> YES, \nand will statement5 be executed? --> NO\n" +
+                "■ If the exception is not Exception1 nor Exception2, will statement4 be executed,--> YES and will statement5 be executed? --> NO\n");
+        System.out.println("12.24 What would be the output if line 16 is replaced by the following line?" +
+                "\njava.lang.Exception: New info from method1\n" +
+                "\tat Chapters.chapter_12.listing_12.Listing12_09.method1(Listing12_09.java:16)\n" +
+                "\tat Chapters.chapter_12.listing_12.Listing12_09.main(Listing12_09.java:6)");
+        System.out.println("12.25 How do you define a custom exception class? --> CustomExceptionClassName  extends Exception or a subclass of Exception.\n");
+        System.out.println("\tException in method()\n" +
+                "\tException in main\n");
+        System.out.println("12.27 What is wrong about creating a File object using the following statement?\n" +
+                "new File(\"c:\\book\\test.dat\"); --> need to use \\\\ character ");
+        System.out.println("12.28 How do you check whether a file already exists?\n\t -> file.exists()\n\tHow do you delete a file? How do" +
+                "you rename a file? \n\t --> renameTo(dest: File): boolean  \nCan you find the file size (the number of bytes) using the File" +
+                "class?\n\t --> YES \nHow do you create a directory?\n\t --> new File(pathname: String)");
+        System.out.println("12.29 Can you use the File class for I/O? --> No \nDoes creating a File object create a file on the disk? --> No\n");
 
     }
 }
