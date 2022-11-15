@@ -16,6 +16,7 @@ public class Triangle extends SimpleGeometricObject {
         this.side2 = side2;
         this.side3 = side3;
     }
+
     public double getArea() {
         double s = (this.side1 + this.side2 + this.side3) / 2;
         double area = Math.sqrt(s * (s - this.side1) * (this.side2) * (this.side3));
@@ -49,10 +50,9 @@ public class Triangle extends SimpleGeometricObject {
     public void setSide3(double side3) {
         this.side3 = this.side3;
     }
+
     @Override
     public String toString() {
         return "Triangle: side1 = " + this.side1 + "\nside2 = " + this.side2 + "\nside3 = " + this.side3;
     }
-
-
 }
