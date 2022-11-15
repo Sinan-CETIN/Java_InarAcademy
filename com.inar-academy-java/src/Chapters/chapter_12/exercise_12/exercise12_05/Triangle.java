@@ -75,6 +75,4 @@ public class Triangle extends SimpleGeometricObject {
     public String toString() {
         return "Triangle: side1 = " + this.side1 + "\nside2 = " + this.side2 + "\nside3 = " + this.side3;
     }
-
-
 }
