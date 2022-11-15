@@ -13,17 +13,19 @@ public class Exercise12_11 {
         }
 
         File file = new File(args[0]);
-        System.out.println(file.exists());
         Scanner input = new Scanner(file);
         String result = "";
         while (input.hasNext()) {
             String s1 = input.nextLine();
-            Scanner input1 = new Scanner(s1);
-            while (input1.hasNext()) {
-                String s2 = input1.next();
-                if ("sinan".equals(s2)) continue;
+            String[] split = s1.split("\\s");
+            String s2 = "";
+            for (int i = 0; i < split.length; i++) {
+                if (split[i].equals(args[1])) {
+                    continue;
+                }
                 result += s2 + " ";
             }
+
             result += "\n";
         }
 
