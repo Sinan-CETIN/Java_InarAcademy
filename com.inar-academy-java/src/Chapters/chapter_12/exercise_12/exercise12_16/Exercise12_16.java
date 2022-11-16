@@ -14,10 +14,10 @@ java Exercise12_16 file oldString newString
  */
 public class Exercise12_16 {
     public static void main(String[] args) throws IOException {
-      /*  if (args.length != 3) {
+        if (args.length != 3) {
             System.out.println("Usage: Exercise12_16 file oldString newString");
             System.exit(1);
-        }*/
+        }
 
         File file = new File(args[0]);
         if (!file.exists()) {
@@ -33,15 +33,8 @@ public class Exercise12_16 {
 
         while(input.hasNext()) {
             String s1 = input.nextLine();
-            String[] split = s1.split("\\s");
-            for (int i = 0; i < split.length; i++) {
-                if(split[i].equals(args[1])) {
-                    output.print(args[2] + " ");
-                } else {
-                    output.print(split[i] + " ");
-                }
-            }
-            output.println();
+            s1 = s1.replace(args[1], args[2]);
+            output.println(s1);
         }
         output.close();
     }
