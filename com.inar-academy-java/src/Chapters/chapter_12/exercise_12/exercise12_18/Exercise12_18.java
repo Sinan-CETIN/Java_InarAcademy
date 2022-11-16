@@ -54,7 +54,7 @@ public class Exercise12_18 {
         }
         input.close();
         PrintWriter output = new PrintWriter(file);
-        output.println(firstLine);
+        output.print(firstLine);
         output.println(total);
         output.close();
     }

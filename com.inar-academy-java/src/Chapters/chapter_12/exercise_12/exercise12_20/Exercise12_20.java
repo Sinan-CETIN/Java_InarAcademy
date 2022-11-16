@@ -20,7 +20,7 @@ public class Exercise12_20 {
                 System.exit(2);
             }
             if (!file.isDirectory()) {
-                System.out.println("File is not a directory!!");
+                System.out.println("File is not a directory!!");System.exit(1);
                 System.exit(3);
             }
         }
@@ -46,7 +46,7 @@ public class Exercise12_20 {
         String total = "";
         while (input.hasNext()) {
             String s = input.nextLine();
-            if (s.equals(packageName)) {
+            if (s.compareToIgnoreCase(packageName) == 0) {
                 continue;
             }
             total += "\n" + s;
