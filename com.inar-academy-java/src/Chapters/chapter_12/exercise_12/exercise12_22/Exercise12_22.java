@@ -8,11 +8,11 @@ import java.util.Scanner;
 
 public class Exercise12_22 {
     public static void main(String[] args) throws IOException {
-       /* if (args.length != 3) {
+       if (args.length != 3) {
             System.out.println("Usage: java Exercise12_22 dir oldString newString");
             System.exit(1);
-        }*/
-        File directory = new File("c:\\Users\\sinan\\OneDrive\\Desktop\\srcDirectory");
+        }
+        File directory = new File(args[0]);
 
         if (!directory.exists()) {
             System.out.println("Directory is not exists");
@@ -32,7 +32,7 @@ public class Exercise12_22 {
                     if (files[i].isDirectory()) {
                         directories.add(files[i]);
                     } else {
-                        changeOldStringWithNew(files[i], "serhat", "sinan");
+                        changeOldStringWithNew(files[i], args[1], args[2]);
                     }
                 }
             }
