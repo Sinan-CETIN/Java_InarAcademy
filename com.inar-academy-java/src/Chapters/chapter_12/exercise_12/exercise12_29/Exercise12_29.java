@@ -1,9 +1,9 @@
-package Chapters.chapter_12.exercise_12.exercise12_27;
+package Chapters.chapter_12.exercise_12.exercise12_29;
 
 import java.io.File;
 import java.util.Scanner;
 
-public class Exercise12_27 {
+public class Exercise12_29 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the directory's path --> ");
@@ -30,10 +30,6 @@ public class Exercise12_27 {
 
             if (split[1].length() == 1) {
                 split[1] = '0' + split[1];
-            }
-
-            if (!Character.isDigit(split[0].charAt(split[0].length() - 2))) {
-                split[0] = split[0].substring(0, split[0].length() - 1) + "0" + split[0].charAt(split[0].length() - 1);
             }
 
             String newName = split[0] + "_" + split[1];
