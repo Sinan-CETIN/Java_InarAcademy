@@ -30,7 +30,7 @@ public class Exercise12_30 {
 
     public static void showCountOfLetter(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Number of " + (char)(i + 'a') + "'s ---> " + array[i]);
+            System.out.println("Number of " + (char)(i + 'A') + "'s ---> " + array[i]);
         }
     }
 }
